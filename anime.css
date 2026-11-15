@@ -25,3 +25,8 @@ body{background:radial-gradient(ellipse at top right,#efe4d14d,transparent 65%),
 .ending-art{aspect-ratio:3/2;object-fit:contain}.end-hero .ending-cg{object-fit:contain}
 
 .ending-card.sealed .ending-art{filter:none}.ending-card.sealed .ending-number{background:#102f32e8;color:#f2d59b;border-color:#b9995e}.ending-card.sealed .ending-copy small{color:#886b40}
+
+/* Only the face changes: the selected hairstyle mask protects bangs and dye. */
+.doll-emotion{clip-path:ellipse(7.5% 4.4% at var(--face-x) var(--face-y));mask-size:100% 100%,300% 100%;mask-position:0 0,var(--frame) 0;mask-repeat:no-repeat;mask-composite:exclude;pointer-events:none}
+.mood-label{margin-top:12px;color:#6a493f;background:#f5e9de}
+.portrait-wrap .text-btn{margin-bottom:12px}
