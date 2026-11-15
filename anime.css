@@ -30,3 +30,23 @@ body{background:radial-gradient(ellipse at top right,#efe4d14d,transparent 65%),
 .doll-emotion{clip-path:ellipse(7.5% 4.4% at var(--face-x) var(--face-y));mask-size:100% 100%,300% 100%;mask-position:0 0,var(--frame) 0;mask-repeat:no-repeat;mask-composite:exclude;pointer-events:none}
 .mood-label{margin-top:12px;color:#6a493f;background:#f5e9de}
 .portrait-wrap .text-btn{margin-bottom:12px}
+
+/* Breathing is anchored at the soles; the ground shadows never move. */
+.doll-motion,.doll-facegroup{position:absolute;inset:0;pointer-events:none}
+.doll-facegroup{transform-origin:50% var(--neck)}
+.scene-doll .doll-motion{transform-origin:50% 97.8%;animation:character-breathe 4.8s ease-in-out infinite}
+@keyframes character-breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.002,1.006)}}
+.scene-doll.is-reacting .doll-facegroup{animation:character-nod .75s ease-in-out}
+@keyframes character-nod{0%,100%{transform:translateY(0) rotate(0)}45%{transform:translateY(1.1px) rotate(-1deg)}70%{transform:translateY(.3px) rotate(.35deg)}}
+.doll-blink{opacity:0;clip-path:inset(var(--eyes-top) calc(100% - var(--face-x) - 7%) calc(100% - var(--eyes-bottom)) calc(var(--face-x) - 7%) round 18%);mask-size:100% 100%,300% 100%;mask-position:0 0,var(--frame) 0;mask-repeat:no-repeat;mask-composite:exclude}
+.scene-doll.is-blinking .doll-blink{opacity:1}
+.paperdoll[data-emotion=neutral] .doll-emotion{visibility:hidden}
+.character-touch{position:absolute;z-index:5;left:22%;width:62%;top:var(--touch-top);bottom:2%;padding:0;border:0;border-radius:45%;background:transparent;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.character-touch:focus-visible{outline:2px dashed #fff5ca;outline-offset:4px}
+.touch-hint{position:absolute;bottom:10px;left:10px;padding:6px 9px;border-radius:5px;background:#fff8e5d9;color:#67543f;font-size:10px;z-index:3;pointer-events:none}
+.character-bubble{position:absolute;top:64px;left:12px;max-width:190px;padding:12px 15px;margin:0;border:1px solid #c5aa79;border-radius:12px 12px 2px 12px;background:#fffaf0f5;color:#66513f;font-size:12px;line-height:1.8;box-shadow:0 3px 14px #55432b22;z-index:6;pointer-events:none}
+.character-bubble[hidden]{display:none}
+.profile .portrait-wrap{height:auto;min-height:110px}
+.character-paused .scene-doll .doll-motion,.character-paused .scene-doll .doll-facegroup{animation-play-state:paused}
+@media(max-width:760px){.character-bubble{max-width:136px;font-size:11px;padding:10px;top:68px}}
+@media(prefers-reduced-motion:reduce){.scene-doll .doll-motion,.scene-doll.is-reacting .doll-facegroup{animation:none}.scene-doll.is-blinking .doll-blink{opacity:0}}
