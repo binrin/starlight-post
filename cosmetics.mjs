@@ -1,5 +1,8 @@
 export const WARDROBE=[
  {id:'outfit-postal',slot:'outfit',name:'별빛 우편복',price:0,desc:'우리의 첫 편지와 함께한 청록빛 옷',art:'outfit-postal'},
+ {id:'outfit-sailor',slot:'outfit',name:'바닷바람 세일러',price:300,desc:'하늘빛 블라우스와 물결 자수의 주름치마',art:'outfit-sailor'},
+ {id:'outfit-overalls',slot:'outfit',name:'데이지 작업복',price:260,desc:'꽃 자수 주머니와 활동하기 편한 멜빵바지',art:'outfit-overalls'},
+ {id:'outfit-winter',slot:'outfit',name:'첫눈의 크랜베리',price:480,desc:'포근한 양털 칼라와 붉은 겨울 외투',art:'outfit-winter'},
  {id:'outfit-rose',slot:'outfit',name:'장미 정원의 오후',price:240,desc:'장미 자수와 크림 레이스의 원피스',art:'outfit-rose'},
  {id:'outfit-scholar',slot:'outfit',name:'한밤의 서고',price:280,desc:'은빛 별자리와 단정한 남색 조끼',art:'outfit-scholar'},
  {id:'outfit-forest',slot:'outfit',name:'초록길 여행자',price:320,desc:'잎사귀 자수와 작은 숲빛 케이프',art:'outfit-forest'},
