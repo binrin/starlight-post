@@ -20,3 +20,6 @@ body{background:radial-gradient(ellipse at top right,#efe4d14d,transparent 65%),
 .anime-scene .world-caption{margin:0;padding:16px 18px;border:0;border-top:1px solid #d9c59c;border-radius:0;background:#fffaf0}
 @media(max-width:1100px){.scene-stage{height:430px}.anime-scene .scene-doll{right:3%;height:94%}}
 @media(max-width:760px){.scene-stage{height:370px}.anime-scene .scene-doll{height:97%;right:7%;bottom:7px}.anime-scene .world-caption{padding:13px 14px}}
+
+/* Preserve every ending composition in the mobile album. */
+.ending-art{aspect-ratio:3/2;object-fit:contain}.end-hero .ending-cg{object-fit:contain}
