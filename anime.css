@@ -23,3 +23,5 @@ body{background:radial-gradient(ellipse at top right,#efe4d14d,transparent 65%),
 
 /* Preserve every ending composition in the mobile album. */
 .ending-art{aspect-ratio:3/2;object-fit:contain}.end-hero .ending-cg{object-fit:contain}
+
+.ending-card.sealed .ending-art{filter:none}.ending-card.sealed .ending-number{background:#102f32e8;color:#f2d59b;border-color:#b9995e}.ending-card.sealed .ending-copy small{color:#886b40}
