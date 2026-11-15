@@ -1,5 +1,5 @@
 import {defaultCosmetics,validateCosmetics} from './cosmetics.mjs';
-export const VERSION='2.0.0';
+export const VERSION='2.0.1';
 export const STATS={wisdom:'지혜',vigor:'체력',heart:'마음',craft:'솜씨',charm:'표현',brave:'용기'};
 export const PEOPLE={sol:{name:'솔',role:'고장 난 별시계를 고치는 발명가',line:'답이 없으면, 새로운 질문을 만들면 되지.',stat:'wisdom'},yun:{name:'윤',role:'숲길을 기록하는 길잡이',line:'천천히 걸어도 길은 우리를 기다려.',stat:'brave'},dam:{name:'담',role:'마을의 이야기를 굽는 제빵사',line:'따뜻한 빵 한 조각이 편지보다 빠를 때도 있어.',stat:'heart'}};
 export const ACTIONS=[

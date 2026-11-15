@@ -8,3 +8,15 @@ body{background:radial-gradient(ellipse at top right,#efe4d14d,transparent 65%),
 /* Explicit scene stacking keeps backdrop visible inside the card. */
 .anime-scene .scene-backdrop{z-index:0}.anime-scene:after{z-index:1}.anime-scene .scene-doll{z-index:2}.anime-scene .world-caption{z-index:3}.anime-scene .world-top{z-index:4}
 @media(max-width:760px){.welcome-inner{grid-template-columns:1fr}.welcome-art-frame{grid-row:1}.color-choice{flex:0 0 calc(20% - 8px);min-width:0}.color-options{gap:10px}.page-heading>.btn{flex-shrink:0;padding:10px}.wardrobe-tabs{flex-wrap:wrap}}
+
+/* Anchor shoes to the room floor; keep the caption outside the scene. */
+.world-card.anime-scene{display:block;min-height:0;align-self:start;background:#fffaf0}
+.anime-scene:after{display:none}
+.scene-stage{position:relative;height:470px;overflow:hidden;isolation:isolate;background:#e1d5bd}
+.anime-scene .scene-backdrop{z-index:0;object-position:55% 65%}
+.anime-scene .scene-doll{height:94%;bottom:8px;right:9%;filter:none}
+.scene-doll:before{content:'';position:absolute;left:39%;top:96.5%;width:28%;height:2.2%;border-radius:50%;background:radial-gradient(ellipse,#48301fd9 0%,#48301f70 35%,#48301f00 73%);z-index:-1;transform:rotate(-3deg)}
+.scene-doll:after{content:'';position:absolute;left:41%;top:96.2%;width:46%;height:3%;border-radius:50%;background:radial-gradient(ellipse,#5a3d3145,transparent 70%);transform:rotate(-8deg);z-index:-2}
+.anime-scene .world-caption{margin:0;padding:16px 18px;border:0;border-top:1px solid #d9c59c;border-radius:0;background:#fffaf0}
+@media(max-width:1100px){.scene-stage{height:430px}.anime-scene .scene-doll{right:3%;height:94%}}
+@media(max-width:760px){.scene-stage{height:370px}.anime-scene .scene-doll{height:97%;right:7%;bottom:7px}.anime-scene .world-caption{padding:13px 14px}}
